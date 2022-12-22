@@ -1,38 +1,173 @@
-.App {
+:root {
+  --bg-color: radial-gradient(
+    circle farthest-corner at 92.3% 71.5%,
+    rgba(83, 138, 214, 1) 0%,
+    rgba(134, 231, 214, 1) 90%
+  );
+  --card-bg-color: rgba(255, 255, 255, 0.4);
+  --text-color-primary: #333;
+  --text-color-secondary: rgb(91, 106, 110);
+  --primary-color: rgb(29, 163, 187);
+  --secondary-color: rgba(255, 255, 255, 0.3);
+  --search-color: rgb(235, 249, 252, 0.5);
+  --hover-color: rgb(26, 141, 161);
+  --active-color: rgb(14, 121, 139);
+  --error-message-bg: rgba(248, 121, 148, 0.5);
+  --error-message-text: rgb(151, 19, 47);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  background-image: var(--bg-color);
+  color: var(--text-color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--card-bg-color);
+  height: auto;
+  width: 360px;
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+#search {
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  border: 1px solid var(--card-bg-color);
+  border-radius: 5px;
+  background-color: var(--search-color);
+}
+
+#search:focus {
+  border-color: var(--primary-color);
+}
+
+.search-section i {
+  height: 100%;
+  padding: 12px 18px;
+  color: white;
+  font-size: 16px;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.search-section i:hover {
+  background-color: var(--hover-color);
+}
+
+.search-section i:active {
+  background-color: var(--active-color);
+}
+
+.error-message {
   text-align: center;
+  font-size: 14px;
+  padding: 10px 20px;
+  margin-bottom: 16px;
+  background-color: var(--error-message-bg);
+  color: var(--error-message-text);
+  border-radius: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.location {
+  margin-bottom: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.location i {
+  color: var(--primary-color);
+  margin-right: 8px;
+  margin-left: -20px;
+}
+
+.weather-icon-container {
+  margin: 16px 0 8px;
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+.weather-icon {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.temperature {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.description {
+  margin-bottom: 16px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 16px;
+  border-top: 1px solid var(--secondary-color);
+}
+
+.details-column {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.details i {
+  color: var(--primary-color);
+  font-size: 24px;
+  margin-bottom: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.details-desc,
+.date {
+  color: var(--text-color-secondary);
+  font-size: 12px;
 }
