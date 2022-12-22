@@ -4,16 +4,16 @@
     rgba(83, 138, 214, 1) 0%,
     rgba(134, 231, 214, 1) 90%
   );
-  --card-bg-color: rgba(255, 255, 255, 0.4);
+  --card-bg-color: #fff;
   --text-color-primary: #333;
-  --text-color-secondary: rgb(91, 106, 110);
+  --text-color-secondary: #6e6a6a;
   --primary-color: rgb(29, 163, 187);
-  --secondary-color: rgba(255, 255, 255, 0.3);
-  --search-color: rgb(235, 249, 252, 0.5);
+  --secondary-color: #d4d4d4;
+  --search-color: rgb(235, 249, 252);
   --hover-color: rgb(26, 141, 161);
   --active-color: rgb(14, 121, 139);
-  --error-message-bg: rgba(248, 121, 148, 0.5);
-  --error-message-text: rgb(151, 19, 47);
+  --error-message-bg: rgb(240, 164, 181);
+  --error-message-text: rgb(167, 14, 47);
 }
 
 * {
@@ -57,7 +57,7 @@ body {
   width: 100%;
   padding: 10px 20px;
   outline: none;
-  border: 1px solid var(--card-bg-color);
+  border: 1px solid var(--secondary-color);
   border-radius: 5px;
   background-color: var(--search-color);
 }
