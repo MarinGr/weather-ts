@@ -1,6 +1,10 @@
 # Weather app
 
-A simple weather app built with React and Typescript.
+Weather app built with React and Typescript. Includes integration with OpenWeatherAPI.
+
+# Stack
+
+React, Typescript, OpenWeather API
 
 # API
 
