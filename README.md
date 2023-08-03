@@ -2,15 +2,15 @@
 
 Weather app built with React and Typescript. Includes integration with OpenWeatherAPI.
 
-# Stack
+## Stack
 
 React, Typescript, OpenWeather API
 
-# API
+## API
 
 Weather data is retrieved from http://openweathermap.org/
 
-# Live demo
+## Live demo
 
 You can load live demo project by clicking this link https://maringr.github.io/weather-ts/
 
